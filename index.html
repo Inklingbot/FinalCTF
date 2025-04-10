@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<style>
+    /* Style for the pop-up text */
+    #popupText {
+        display: none; /* Hidden by default */
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        font-size: 20px;
+        text-align: center;
+    }
+    #popupText2 {
+            display: none; /* Initially hidden */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+        }
+        #popupText3 {
+            display: none; /* Initially hidden */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+    /* Style for the image */
+    #playAudioImage {
+        cursor: pointer;
+    }
+</style>
+<html>
+
+<head>
+    <link rel="stylesheet" href="formatting.css">
+
+    <title>Help Dr. Hansen!</title>
+    <h1> Doctor Hansen's Tubular Website!</h1>
+    <img src="BlackmailImage.bmp" alt="Click to play audio" id="playAudioImage" style="cursor: pointer;">
+    
+    <!-- Audio element that is initially paused -->
+    <audio id="audio" loop>
+        <source src="SecretEasterEgg.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <div id="popupText">Oops, you clicked it! This isn't the data in the image, you'll have to save the image first! </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        // Get the image element and the audio element
+        image = document.getElementById("playAudioImage");
+        const audio = document.getElementById("audio");
+        popupText = document.getElementById("popupText");
+
+        // Add an event listener to play audio on image click
+        image.addEventListener("click", function() {
+            audio.play();
+            popupText.style.display = "block";
+
+            // Hide the popup text after 3 seconds (you can adjust the time)
+            setTimeout(function() {
+                popupText.style.display = "none";
+            }, 5000); // Hide after 3 seconds
+        });
+        });
+    </script>
+
+    
+    <!-- <img src="BlackmailImage.bmp" alt="He's lookin fine"style="width:480px;height:720px;"/> -->
+
+</head>
+
+<body>
+    <div class="parallax-container"></div>
+    <h1>
+        <script>
+            document.write(new Date().getHours() < 12 ? "Good morning, Homies." : "Good afternoon, crew.");
+        </script>
+    </h1>
+    <h2> Now Listen Up, gang!</h2>
+    <p> It's me, your 2001 Cybersecurity Professor, Dr. Hansen (you can call me Dr. Cool if you want). Things got off the chain,
+        and long story short, I'm being blackmailed. Some guy from bronze falls, (I know, I should move my infrastructure out of that town, 
+    it's rumoured to have a cyber team run by college kids) created this sweet photoshopped image of me. The bad part is it apparently contains
+    my most egregious error I've ever made, a malformed packet! He must have used Wireshark to capture it.</p>
+
+</body>
+
+<h2> What YOU gotta do</h2>
+<p> Dude, I need you to somehow get the file that is encrypted in this image, and then find that malformed packet that contains the flag I sent!
+    If you can, my reputation will be saved amongst the crib. I know you can do it, you guys have game. Good luck!</p>
+
+    
+    
+
+ <h2>Click on the TAs for some Hints!</h2>
+
+ <img src="BrendanSkater.png" alt="He Skates" id="Brendan" style="cursor: pointer;">
+ <div id="popupText2">Hey, I'm Brendan. <br>OpenStego is a program that decrypts messages and files hidden within image metadata. <br>Could this be used to find the packet capture file? </div>
+ <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    // Get the image element and the audio element
+    const image = document.getElementById("Brendan");
+    const popupText = document.getElementById("popupText2");
+
+    // Add an event listener to play audio on image click
+    image.addEventListener("click", function() {
+        popupText.style.display = "block";
+
+        // Hide the popup text after 3 seconds (you can adjust the time)
+        setTimeout(function() {
+            popupText.style.display = "none";
+        }, 5000); // Hide after 3 seconds
+    });
+    });
+</script>
+<br>
+<img src="RyanTheSkater.png" alt="Ryan Skates?" id="Ryan" style="cursor: pointer;"style="width:200px;height:267px;">
+<div id="popupText3">Yo, it's Ryan! <br>Searching for a malformed packet in all this data could take forever.<br> Is there a faster way to search for a certain packet quality? </div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    // Get the image element and the audio element
+    const image = document.getElementById("Ryan");
+    const popupText = document.getElementById("popupText3");
+
+    // Add an event listener to play audio on image click
+    image.addEventListener("click", function() {
+        popupText.style.display = "block";
+
+        // Hide the popup text after 3 seconds (you can adjust the time)
+        setTimeout(function() {
+            popupText.style.display = "none";
+        }, 5000); // Hide after 3 seconds
+    });
+    });
+</script>
+
+    
+</body>
+
+
+</html>
+
+
